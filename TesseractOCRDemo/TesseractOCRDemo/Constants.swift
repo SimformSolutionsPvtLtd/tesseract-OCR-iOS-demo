@@ -13,7 +13,7 @@ struct StringConstants {
     static let lang = "eng"
     static let alertTitle = "Alert"
     static let alertMessage = "Please Snap/Upload Proper Image."
-    static let alertBtnTitle = "Dismiss"
+    static let alertButtonTitle = "Dismiss"
     static let imagePickerActionSheetTitle = "Snap/Upload Image"
     static let cameraButtonTitle = "Take Photo"
     static let libraryButtonTitle = "Choose Existing"

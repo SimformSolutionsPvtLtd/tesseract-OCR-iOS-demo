@@ -9,7 +9,7 @@ DEPENDENCIES:
   - TesseractOCRiOS (= 5.0.1)
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  trunk:
     - GPUImage
     - IQKeyboardManagerSwift
     - TesseractOCRiOS

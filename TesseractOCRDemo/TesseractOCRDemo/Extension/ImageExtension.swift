@@ -53,8 +53,7 @@ extension UIImage {
         noiseReduction.setValue(Defaults.inputNoiseLevel, forKey: StringConstants.inputNoiseLevel)
         noiseReduction.setValue(Defaults.inputSharpness, forKey: StringConstants.inputSharpness)
         
-        if let output = noiseReduction.outputImage, let cgImage = ciContext.createCGImage(output, from: output.extent)
-        {
+        if let output = noiseReduction.outputImage, let cgImage = ciContext.createCGImage(output, from: output.extent) {
             return UIImage(cgImage: cgImage, scale: scale, orientation: imageOrientation)
         }
         return UIImage()

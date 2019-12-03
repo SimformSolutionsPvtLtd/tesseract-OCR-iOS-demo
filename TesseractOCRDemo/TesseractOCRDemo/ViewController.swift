@@ -67,7 +67,7 @@ class ViewController: UIViewController {
         txtView.isHidden = true
         let alertController = UIAlertController(title: StringConstants.alertTitle, message:
             StringConstants.alertMessage, preferredStyle: .alert)
-        alertController.addAction(UIAlertAction(title: StringConstants.alertBtnTitle, style: .default))
+        alertController.addAction(UIAlertAction(title: StringConstants.alertButtonTitle, style: .default))
         
         self.present(alertController, animated: true, completion: nil)
     }
@@ -114,24 +114,18 @@ class ViewController: UIViewController {
         let cancelButton = UIAlertAction(title: StringConstants.cancelButtonTitle, style: .cancel)
         imagePickerActionSheet.addAction(cancelButton)
         present(imagePickerActionSheet, animated: true)
-        
     }
-    
     
     @IBAction func onClickOfResetBtn(_ sender: Any) {
         selectedImage.image = nil
         txtView.text = ""
         txtView.isHidden = true
     }
-    
-    
 }
 
 // MARK: - UINavigationControllerDelegate
 
-extension ViewController: UINavigationControllerDelegate {
-    
-}
+extension ViewController: UINavigationControllerDelegate { }
 
 // MARK: - UIImagePickerControllerDelegate
 
