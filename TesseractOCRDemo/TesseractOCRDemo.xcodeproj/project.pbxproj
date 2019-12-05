@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		201D45E2FDFB6262AFCCD4C9 /* Pods_TesseractOCRDemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8313CF807ACBE9696E1BBAA7 /* Pods_TesseractOCRDemoUITests.framework */; };
 		DD577BF3239249B100FC1793 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD577BF2239249B100FC1793 /* CustomButton.swift */; };
 		DD577BF52392666600FC1793 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD577BF42392666600FC1793 /* ViewController.swift */; };
 		DD7420502359DA7A002546EA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD74204F2359DA7A002546EA /* Constants.swift */; };
@@ -19,7 +18,6 @@
 		DDD46AD223583F6A00C77428 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDD46AD023583F6A00C77428 /* LaunchScreen.storyboard */; };
 		DDD46AF623583FBE00C77428 /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = DDD46AF523583FBE00C77428 /* tessdata */; };
 		DDD46AFA23584EAC00C77428 /* ImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD46AF923584EAC00C77428 /* ImageExtension.swift */; };
-		E10C6F2B471FBB41E9D34082 /* Pods_TesseractOCRDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BFB8251791F95D3390AB9DA /* Pods_TesseractOCRDemoTests.framework */; };
 		FEED555A6C04929AC7D0A1DB /* Pods_TesseractOCRDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0BB5DB3A08AA7B40768D20F /* Pods_TesseractOCRDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,12 +39,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		351C2DA248BA057F86E0E170 /* Pods-TesseractOCRDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TesseractOCRDemoUITests.release.xcconfig"; path = "Target Support Files/Pods-TesseractOCRDemoUITests/Pods-TesseractOCRDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
-		7BFB8251791F95D3390AB9DA /* Pods_TesseractOCRDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TesseractOCRDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8313CF807ACBE9696E1BBAA7 /* Pods_TesseractOCRDemoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TesseractOCRDemoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AB1338094ADFCFCB8FB7ACDF /* Pods-TesseractOCRDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TesseractOCRDemoTests.release.xcconfig"; path = "Target Support Files/Pods-TesseractOCRDemoTests/Pods-TesseractOCRDemoTests.release.xcconfig"; sourceTree = "<group>"; };
-		ACDAA9C7F42CEDD2DB79062B /* Pods-TesseractOCRDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TesseractOCRDemoUITests.debug.xcconfig"; path = "Target Support Files/Pods-TesseractOCRDemoUITests/Pods-TesseractOCRDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		C69C3EC7FC01FB164C2AEA86 /* Pods-TesseractOCRDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TesseractOCRDemoTests.debug.xcconfig"; path = "Target Support Files/Pods-TesseractOCRDemoTests/Pods-TesseractOCRDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D0BB5DB3A08AA7B40768D20F /* Pods_TesseractOCRDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TesseractOCRDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD577BF2239249B100FC1793 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		DD577BF42392666600FC1793 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -80,7 +72,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E10C6F2B471FBB41E9D34082 /* Pods_TesseractOCRDemoTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,7 +79,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				201D45E2FDFB6262AFCCD4C9 /* Pods_TesseractOCRDemoUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,8 +89,6 @@
 			isa = PBXGroup;
 			children = (
 				D0BB5DB3A08AA7B40768D20F /* Pods_TesseractOCRDemo.framework */,
-				7BFB8251791F95D3390AB9DA /* Pods_TesseractOCRDemoTests.framework */,
-				8313CF807ACBE9696E1BBAA7 /* Pods_TesseractOCRDemoUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -110,10 +98,6 @@
 			children = (
 				EDCF99D45290087DCEE1F7A8 /* Pods-TesseractOCRDemo.debug.xcconfig */,
 				FAC910CA613CBE4405270F56 /* Pods-TesseractOCRDemo.release.xcconfig */,
-				C69C3EC7FC01FB164C2AEA86 /* Pods-TesseractOCRDemoTests.debug.xcconfig */,
-				AB1338094ADFCFCB8FB7ACDF /* Pods-TesseractOCRDemoTests.release.xcconfig */,
-				ACDAA9C7F42CEDD2DB79062B /* Pods-TesseractOCRDemoUITests.debug.xcconfig */,
-				351C2DA248BA057F86E0E170 /* Pods-TesseractOCRDemoUITests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -191,7 +175,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DDD46AEF23583F6A00C77428 /* Build configuration list for PBXNativeTarget "TesseractOCRDemoTests" */;
 			buildPhases = (
-				A93AAABF3A419245F0C411A0 /* [CP] Check Pods Manifest.lock */,
 				DDD46AD423583F6A00C77428 /* Sources */,
 				DDD46AD523583F6A00C77428 /* Frameworks */,
 				DDD46AD623583F6A00C77428 /* Resources */,
@@ -210,7 +193,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DDD46AF223583F6A00C77428 /* Build configuration list for PBXNativeTarget "TesseractOCRDemoUITests" */;
 			buildPhases = (
-				4D4E448CAEEAB4FBFBF698FB /* [CP] Check Pods Manifest.lock */,
 				DDD46ADF23583F6A00C77428 /* Sources */,
 				DDD46AE023583F6A00C77428 /* Frameworks */,
 				DDD46AE123583F6A00C77428 /* Resources */,
@@ -316,28 +298,6 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TesseractOCRDemo/Pods-TesseractOCRDemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		4D4E448CAEEAB4FBFBF698FB /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-TesseractOCRDemoUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		963F7C18EE4265BB6F181F3F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -354,28 +314,6 @@
 			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-TesseractOCRDemo-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A93AAABF3A419245F0C411A0 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-TesseractOCRDemoTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -602,7 +540,6 @@
 		};
 		DDD46AF023583F6A00C77428 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C69C3EC7FC01FB164C2AEA86 /* Pods-TesseractOCRDemoTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -623,7 +560,6 @@
 		};
 		DDD46AF123583F6A00C77428 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AB1338094ADFCFCB8FB7ACDF /* Pods-TesseractOCRDemoTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -644,7 +580,6 @@
 		};
 		DDD46AF323583F6A00C77428 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ACDAA9C7F42CEDD2DB79062B /* Pods-TesseractOCRDemoUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -664,7 +599,6 @@
 		};
 		DDD46AF423583F6A00C77428 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 351C2DA248BA057F86E0E170 /* Pods-TesseractOCRDemoUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

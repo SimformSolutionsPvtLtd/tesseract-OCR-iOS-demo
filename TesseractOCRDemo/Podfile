@@ -11,14 +11,4 @@ target 'TesseractOCRDemo' do
   pod 'GPUImage','0.1.7' # for image processing
   pod 'IQKeyboardManagerSwift','6.0.4' # to manage keyboard behaviour in textfield and textview
   
-  target 'TesseractOCRDemoTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
-  target 'TesseractOCRDemoUITests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
 end
