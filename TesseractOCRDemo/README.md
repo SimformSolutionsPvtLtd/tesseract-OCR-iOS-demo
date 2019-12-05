@@ -1,4 +1,4 @@
-# Tesseract OCR iOS Prototype
+# Tesseract OCR iOS demo
 
 OCR is the process of electronically extracting text from images. You’ve undoubtedly seen it before it’s widely used to process everything from scanned documents, to the handwritten scribbles on your mobile, iPad and PC.
 
