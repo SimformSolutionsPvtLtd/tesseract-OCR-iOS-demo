@@ -2,7 +2,7 @@
 
 OCR is the process of electronically extracting text from images. You’ve undoubtedly seen it before it’s widely used to process everything from scanned documents, to the handwritten scribbles on your mobile, iPad and PC.
 
-In here, you’ll learn how to use Tesseract, an open-source OCR engine maintained by Google, to grab text from a image.This prototype is to recongnize text inside image and for that it uses tesseract OCR.The underlying Tesseract engine will process the image and return anything that it believes is text.
+In here, you’ll learn how to use Tesseract, an open-source OCR engine maintained by Google, to grab text from a image. This prototype is to recongnize text inside image and for that it uses tesseract OCR. The underlying Tesseract engine will process the image and return anything that it believes is text.
 
 <img src="https://user-images.githubusercontent.com/8736329/70211504-4678b500-175b-11ea-9479-8362a0b8cde0.gif"
 width="200" height="350">
@@ -11,11 +11,11 @@ width="200" height="350">
 
 How Tesseract OCR Works?
 
-Generally speaking, OCR uses artificial intelligence to find and recognize text in images.Some OCR engines rely on a type of artificial intelligence called machine learning. Machine learning allows a system to learn from and adapt to data by identifying and predicting patterns.The Tesseract OCR iOS engine uses a specific type of machine-learning model called a neural network.
+Generally speaking, OCR uses artificial intelligence to find and recognize text in images. Some OCR engines rely on a type of artificial intelligence called machine learning. Machine learning allows a system to learn from and adapt to data by identifying and predicting patterns. The Tesseract OCR iOS engine uses a specific type of machine-learning model called a neural network.
 
 How are you going to use Tesseract OCR in iOS?
 
-- Nexor Technology has created a compatible Swift wrapper for Tesseract OCR.Following are the steps that shows how are you going to use this in iOS.
+- Nexor Technology has created a compatible Swift wrapper for Tesseract OCR. Following are the steps that shows how are you going to use this in iOS.
 
 1. Adding the Tesseract Framework
 2. Adding Trained Data
@@ -34,7 +34,7 @@ If you haven’t already installed CocoaPods on your computer, open Terminal, th
 sudo gem install cocoapods
 ```
 Enter your computer’s password when requested to complete the CocoaPods installation.
-Next, cd  into the Tesseract OCR Demo project folder. For example, if you’ve added Tesseract OCR Demo to your desktop, you can enter:
+Next, cd into the Tesseract OCR Demo project folder. For example, if you’ve added Tesseract OCR Demo to your desktop, you can enter:
 ```
 cd ~/Desktop/"TesseractOCRDemo"
 ```
