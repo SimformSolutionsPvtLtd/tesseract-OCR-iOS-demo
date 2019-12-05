@@ -9,11 +9,77 @@ width="200" height="350">          <img src="https://user-images.githubuserconte
 width="200" height="350"> 
 
 
+## Getting Started
+
+There are following points we need to follow to use tesseract OCR and get the better the output out of it. 
+
+##  Adding Trained Data
+
+In order to better hone its predictions within the boundaries of a given language, Tesseract requires language-specific training data to perform its OCR.
+
+Navigate to Tesseract OCR Demo/Resources in Finder. The tessdata folder contains a bunch of English training files. The image/document you’ll process in this project is mainly in English.
+
+Now, you’ll add tessdata to your project. Tesseract OCR iOS requires you to add tessdata as a referenced folder.
+
+- Drag the tessdata folder from Finder to the Tesseract OCR Demo folder in Xcode’s left-hand Project navigator.
+- Select Copy items if needed.
+- Set the Added Folders option to Create folder references.
+- Confirm that the target is selected before clicking Finish.
+
+![Monosnap 2019-12-05 11-41-18](https://user-images.githubusercontent.com/8736329/70208814-88eac380-1754-11ea-81ea-c66b2a789dc0.png)
+
+You should now see a blue tessdata folder in the navigator. The blue color indicates that the folder is referenced rather than an Xcode group.
+
+NOTE: In the Key fields of those two new entries, add Privacy – Camera Usage Description to one and Privacy – Photo Library Usage Description to the other. Select type String for each. Then in the Value column, enter whatever text you’d like to display to the user when requesting permission to access their camera and photo library, respectively.
+
+## Scaling and removing noise from image
+
+### Scaling Image
+
+The aspect ratio of an image is the proportional relationship between its width and height. Mathematically speaking, to reduce the size of the original image without affecting the aspect ratio, you must keep the width-to-height ratio constant.
+
+When you know both the height and the width of the original image, and you know either the desired height or width of the final image, you can rearrange the aspect ratio equation.
+
+scaledImage(_ maxDimension: CGFloat) 
+```
+var scaledSize = CGSize(width: maxDimension, height: maxDimension)
+if size.width > size.height {
+scaledSize.height = size.height / size.width * scaledSize.width
+} else {
+scaledSize.width = size.width / size.height * scaledSize.height
+}
+UIGraphicsBeginImageContext(scaledSize)
+draw(in: CGRect(origin: .zero, size: scaledSize))
+let scaledImage = UIGraphicsGetImageFromCurrentImageContext()
+UIGraphicsEndImageContext()
+return scaledImage
+```
+### Removing Noise From Image
+
+Image noise is random variation of brightness or color information in images, and is usually an aspect of electronic noise. removing noise from image improves its quality.
+
+removeNoise(noiseReducted: UIImage) 
+```
+guard let openGLContext = EAGLContext(api: .openGLES2) else { return self }
+let ciContext = CIContext(eaglContext: openGLContext)
+
+guard let noiseReduction = CIFilter(name: StringConstants.noiseReductionFilterName) else { return self }
+noiseReduction.setValue(CIImage(image: self), forKey: kCIInputImageKey)
+noiseReduction.setValue(Defaults.inputNoiseLevel, forKey: StringConstants.inputNoiseLevel)
+noiseReduction.setValue(Defaults.inputSharpness, forKey: StringConstants.inputSharpness)
+
+if let output = noiseReduction.outputImage, let cgImage = ciContext.createCGImage(output, from: output.extent) {
+return UIImage(cgImage: cgImage, scale: scale, orientation: imageOrientation)
+}
+return UIImage()
+```
+As shown in the above code snippet It will apply filter on image and remove noise using different parameters.
 
 
 ## Use Cases of Tesseract OCR
 
 
+It can be used to recognize documnets, receipts and street-signs etc.let's go though all of them with example.
 
 ### Documents (book pages, letters)
 
@@ -93,72 +159,6 @@ Caution
 Site traffic
 ```
 - This is a mistake in output due to symbol. 
-
-## Getting Started
-
-There are following points we need to follow to use tesseract OCR and get the better the output out of it. 
-
-##  Adding Trained Data
-
-In order to better hone its predictions within the boundaries of a given language, Tesseract requires language-specific training data to perform its OCR.
-
-Navigate to Tesseract OCR Demo/Resources in Finder. The tessdata folder contains a bunch of English training files. The image/document you’ll process in this project is mainly in English.
-
-Now, you’ll add tessdata to your project. Tesseract OCR iOS requires you to add tessdata as a referenced folder.
-
-- Drag the tessdata folder from Finder to the Tesseract OCR Demo folder in Xcode’s left-hand Project navigator.
-- Select Copy items if needed.
-- Set the Added Folders option to Create folder references.
-- Confirm that the target is selected before clicking Finish.
-
-![Monosnap 2019-12-05 11-41-18](https://user-images.githubusercontent.com/8736329/70208814-88eac380-1754-11ea-81ea-c66b2a789dc0.png)
-
-You should now see a blue tessdata folder in the navigator. The blue color indicates that the folder is referenced rather than an Xcode group.
-
-NOTE: In the Key fields of those two new entries, add Privacy – Camera Usage Description to one and Privacy – Photo Library Usage Description to the other. Select type String for each. Then in the Value column, enter whatever text you’d like to display to the user when requesting permission to access their camera and photo library, respectively.
-
-## Scaling and removing noise from image
-
-### Scaling Image
-
-The aspect ratio of an image is the proportional relationship between its width and height. Mathematically speaking, to reduce the size of the original image without affecting the aspect ratio, you must keep the width-to-height ratio constant.
-
-When you know both the height and the width of the original image, and you know either the desired height or width of the final image, you can rearrange the aspect ratio equation.
-
-scaledImage(_ maxDimension: CGFloat) 
-```
-var scaledSize = CGSize(width: maxDimension, height: maxDimension)
-if size.width > size.height {
-scaledSize.height = size.height / size.width * scaledSize.width
-} else {
-scaledSize.width = size.width / size.height * scaledSize.height
-}
-UIGraphicsBeginImageContext(scaledSize)
-draw(in: CGRect(origin: .zero, size: scaledSize))
-let scaledImage = UIGraphicsGetImageFromCurrentImageContext()
-UIGraphicsEndImageContext()
-return scaledImage
-```
-### Removing Noise From Image
-
-Image noise is random variation of brightness or color information in images, and is usually an aspect of electronic noise. removing noise from image improves its quality.
-
-removeNoise(noiseReducted: UIImage) 
-```
-guard let openGLContext = EAGLContext(api: .openGLES2) else { return self }
-let ciContext = CIContext(eaglContext: openGLContext)
-
-guard let noiseReduction = CIFilter(name: StringConstants.noiseReductionFilterName) else { return self }
-noiseReduction.setValue(CIImage(image: self), forKey: kCIInputImageKey)
-noiseReduction.setValue(Defaults.inputNoiseLevel, forKey: StringConstants.inputNoiseLevel)
-noiseReduction.setValue(Defaults.inputSharpness, forKey: StringConstants.inputSharpness)
-
-if let output = noiseReduction.outputImage, let cgImage = ciContext.createCGImage(output, from: output.extent) {
-return UIImage(cgImage: cgImage, scale: scale, orientation: imageOrientation)
-}
-return UIImage()
-```
-As shown in the above code snippet It will apply filter on image and remove noise using different parameters.
 
 ### Copyright
 
