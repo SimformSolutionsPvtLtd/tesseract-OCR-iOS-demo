@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vm5-kR-wx3">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Gilroy-Regular.otf">
+            <string>Gilroy-Regular</string>
+        </array>
+        <array key="Gilroy-SemiBold.otf">
+            <string>Gilroy-SemiBold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ri7-ol-Ku9">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" id="vm5-kR-wx3" customClass="ViewController" customModule="TesseractOCRDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="t4F-gi-ma4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xXe-ZL-uoF">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nIJ-wB-AH2" customClass="CustomButton" customModule="TesseractOCRDemo" customModuleProvider="target">
+                                        <rect key="frame" x="94.5" y="452.5" width="225" height="30"/>
+                                        <color key="backgroundColor" red="0.27843137254901962" green="0.41568627450980389" blue="0.31764705882352939" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="3CF-rc-jdO"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Gilroy-SemiBold" family="Gilroy" pointSize="17"/>
+                                        <state key="normal" title="Snap/Upload Image">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="6"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="takePhoto:" destination="vm5-kR-wx3" eventType="touchUpInside" id="g1U-Pb-olk"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Snap/upload a clear picture of your document then edit below." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gVS-tY-179">
+                                        <rect key="frame" x="20" y="40" width="374" height="103.5"/>
+                                        <fontDescription key="fontDescription" name="Gilroy-Regular" family="Gilroy" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Mpc-nA-rK1">
+                                        <rect key="frame" x="50" y="562.5" width="314" height="313.5"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6Hp-Fa-j3d">
+                                        <rect key="frame" x="50" y="153.5" width="314" height="269"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Whi-ga-ZSw" customClass="CustomButton" customModule="TesseractOCRDemo" customModuleProvider="target">
+                                        <rect key="frame" x="94.5" y="502.5" width="225" height="30"/>
+                                        <color key="backgroundColor" red="0.2784313725" green="0.41568627450000001" blue="0.31764705879999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="F49-a8-0EB"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Gilroy-SemiBold" family="Gilroy" pointSize="17"/>
+                                        <state key="normal" title="Reset">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="6"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="onClickOfResetBtn:" destination="vm5-kR-wx3" eventType="touchUpInside" id="S1Z-LL-r93"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.95686274509803915" green="0.9882352941176471" blue="0.9882352941176471" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="6Hp-Fa-j3d" secondAttribute="trailing" constant="50" id="1Eg-nb-I6b"/>
+                                    <constraint firstItem="gVS-tY-179" firstAttribute="top" secondItem="xXe-ZL-uoF" secondAttribute="top" constant="40" id="8CU-hn-ltR"/>
+                                    <constraint firstItem="6Hp-Fa-j3d" firstAttribute="height" secondItem="xXe-ZL-uoF" secondAttribute="height" multiplier="0.3" id="BDY-Ir-A2j"/>
+                                    <constraint firstItem="6Hp-Fa-j3d" firstAttribute="top" secondItem="gVS-tY-179" secondAttribute="bottom" constant="10" id="Nkk-HO-Hng"/>
+                                    <constraint firstItem="nIJ-wB-AH2" firstAttribute="leading" secondItem="xXe-ZL-uoF" secondAttribute="leading" constant="94.5" id="Udc-22-Bhi"/>
+                                    <constraint firstItem="Whi-ga-ZSw" firstAttribute="leading" secondItem="xXe-ZL-uoF" secondAttribute="leading" constant="94.5" id="YNv-Ve-y1w"/>
+                                    <constraint firstAttribute="trailing" secondItem="gVS-tY-179" secondAttribute="trailing" constant="20" id="aj5-oJ-Cef"/>
+                                    <constraint firstItem="Mpc-nA-rK1" firstAttribute="top" secondItem="Whi-ga-ZSw" secondAttribute="bottom" constant="30" id="dDV-Zi-CuU"/>
+                                    <constraint firstItem="Mpc-nA-rK1" firstAttribute="height" secondItem="xXe-ZL-uoF" secondAttribute="height" multiplier="0.35" id="ddf-sh-our"/>
+                                    <constraint firstAttribute="trailing" secondItem="Whi-ga-ZSw" secondAttribute="trailing" constant="94.5" id="dkd-gn-N8c"/>
+                                    <constraint firstItem="gVS-tY-179" firstAttribute="leading" secondItem="xXe-ZL-uoF" secondAttribute="leading" constant="20" id="fFd-co-0rg"/>
+                                    <constraint firstItem="Mpc-nA-rK1" firstAttribute="leading" secondItem="xXe-ZL-uoF" secondAttribute="leading" constant="50" id="gSf-6d-Z3S"/>
+                                    <constraint firstItem="Whi-ga-ZSw" firstAttribute="top" secondItem="nIJ-wB-AH2" secondAttribute="bottom" constant="20" id="hhb-LS-XwV"/>
+                                    <constraint firstAttribute="trailing" secondItem="nIJ-wB-AH2" secondAttribute="trailing" constant="94.5" id="iUb-6l-dAF"/>
+                                    <constraint firstItem="6Hp-Fa-j3d" firstAttribute="leading" secondItem="xXe-ZL-uoF" secondAttribute="leading" constant="50" id="jL2-qv-oWs"/>
+                                    <constraint firstItem="nIJ-wB-AH2" firstAttribute="top" secondItem="6Hp-Fa-j3d" secondAttribute="bottom" constant="30" id="jZI-78-znW"/>
+                                    <constraint firstAttribute="bottom" secondItem="Mpc-nA-rK1" secondAttribute="bottom" constant="20" id="jt1-7t-V4a"/>
+                                    <constraint firstAttribute="trailing" secondItem="Mpc-nA-rK1" secondAttribute="trailing" constant="50" id="uON-Ys-iDE"/>
+                                </constraints>
+                            </view>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="kKk-2g-Whx">
+                                <rect key="frame" x="0.0" y="250" width="414" height="646"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="xXe-ZL-uoF" secondAttribute="bottom" id="1ai-Pq-V5F"/>
+                            <constraint firstItem="kKk-2g-Whx" firstAttribute="leading" secondItem="zJS-SV-q9D" secondAttribute="leading" id="9Je-mB-p4x"/>
+                            <constraint firstItem="zJS-SV-q9D" firstAttribute="trailing" secondItem="xXe-ZL-uoF" secondAttribute="trailing" id="LSK-tD-TtV"/>
+                            <constraint firstItem="xXe-ZL-uoF" firstAttribute="leading" secondItem="zJS-SV-q9D" secondAttribute="leading" id="TRG-G5-Yxf"/>
+                            <constraint firstItem="kKk-2g-Whx" firstAttribute="trailing" secondItem="zJS-SV-q9D" secondAttribute="trailing" id="Xte-YR-VTF"/>
+                            <constraint firstAttribute="bottom" secondItem="kKk-2g-Whx" secondAttribute="bottom" id="b8V-f7-wr1"/>
+                            <constraint firstItem="kKk-2g-Whx" firstAttribute="top" secondItem="t4F-gi-ma4" secondAttribute="top" constant="250" id="ntU-B2-WM8"/>
+                            <constraint firstItem="xXe-ZL-uoF" firstAttribute="top" secondItem="t4F-gi-ma4" secondAttribute="top" id="vL4-JS-INE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="zJS-SV-q9D"/>
+                    </view>
+                    <connections>
+                        <outlet property="activityLoader" destination="kKk-2g-Whx" id="89I-Mg-zMa"/>
+                        <outlet property="selectedImage" destination="6Hp-Fa-j3d" id="ZwA-DU-ywY"/>
+                        <outlet property="txtView" destination="Mpc-nA-rK1" id="8c0-Rp-dE1"/>
+                        <outlet property="viewContainer" destination="t4F-gi-ma4" id="3rY-6t-SxM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6WP-3q-bU6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1915.9420289855075" y="117.85714285714285"/>
+        </scene>
+    </scenes>
+</document>
