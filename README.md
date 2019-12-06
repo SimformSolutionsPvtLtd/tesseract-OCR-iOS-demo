@@ -20,8 +20,6 @@ For this project we have only included English training files to tessdata folder
 
 ![Monosnap 2019-12-05 11-41-18](https://user-images.githubusercontent.com/8736329/70208814-88eac380-1754-11ea-81ea-c66b2a789dc0.png)
 
-You should now see a blue tessdata folder in the navigator. The blue color indicates that the folder is referenced rather than an Xcode group.
-
 ## Scaling and Removing noise from an image
 
 ### Scaling Image
@@ -30,7 +28,7 @@ Image scaling is performed ultimately to achieve resolution enhancement without 
 
 ### Removing Noise From Image
 
-Image noise is a random variation of brightness or color information in images and is usually an aspect of electronic noise. Removing noise from image improves its quality. it will apply a filter on image and remove noise using different parameters.
+Image noise is a random variation of brightness or color information in images and is usually an aspect of electronic noise. Removing noise from image improves its quality. It will apply a filter on an image and remove noise using different parameters.
 
 ## Use Cases of Tesseract OCR
 
