@@ -32,7 +32,6 @@ Image noise is a random variation of brightness or color information in images a
 
 ## Use Cases of Tesseract OCR
 
-
 It can be used to recognize documents, receipts, and street-signs etc.let's go through all of them with example.
 
 ### Documents 
@@ -114,3 +113,8 @@ Site traffic
 ```
 - This is a mistake in output due to a symbol. 
 
+### License
+
+Tesseract OCR iOS and TesseractOCR.framework are distributed under the MIT license (see LICENSE.md).
+
+Tesseract, maintained by Google (http://code.google.com/p/tesseract-ocr/), is distributed under the Apache 2.0 license (see http://www.apache.org/licenses/LICENSE-2.0).
