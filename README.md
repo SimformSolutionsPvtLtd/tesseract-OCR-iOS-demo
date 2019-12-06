@@ -26,13 +26,13 @@ For this project we have only included English training files to tessdata folder
 
 Image scaling is performed ultimately to achieve resolution enhancement without loss of image quality. We can implement this using an aspect ratio of an image that has a proportional relationship with image width and height.
 
-### Removing Noise From Image
+### Removing Noise from Image
 
 Image noise is a random variation of brightness or color information in images and is usually an aspect of electronic noise. Removing noise from image improves its quality.
 
 ## Use Cases of Tesseract OCR
 
-It can be used to recognize documents, receipts, and street-signs etc. Let's go through all of them with example.
+It can be used to recognize documents, receipts, and street-signs etc. Let's go through all of them with examples.
 
 ### Documents 
 
