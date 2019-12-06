@@ -56,7 +56,7 @@ Thy placid lightning o'er the awaken'd sky.
 
 ### Receipts
 
-- A slightly difficult example is a Receipt which has non-uniform text layout and multiple fonts. Book pages and documents have very well defined a structure and very little variation in font sizes and equally spaced data which is not the case in bill receipts. These examples shows how tesseract will perform on scanned receipts.
+- A slightly difficult example is a Receipt which has non-uniform text layout and multiple fonts. Book pages and documents have very well defined structure and very little variation in font sizes and equally spaced data which is not the case in bill receipts. These examples shows how tesseract will perform on scanned receipts.
 
 ![receipt](https://user-images.githubusercontent.com/8736329/70234293-5b1e7280-1786-11ea-8b18-27728a210bc0.png)
 
