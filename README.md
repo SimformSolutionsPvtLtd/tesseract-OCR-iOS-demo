@@ -24,11 +24,11 @@ For this project we have only included English training files to tessdata folder
 
 ### Scaling Image
 
-Image scaling is performed ultimately to achieve resolution enhancement without loss of image quality. We can implement this using an aspect ratio of an image that has a proportional relationship with image width and height. For example, if we keep a width-to-height ratio constant then it won't affect the aspect ratio of the image.
+Image scaling is performed ultimately to achieve resolution enhancement without loss of image quality. We can implement this using an aspect ratio of an image that has a proportional relationship with image width and height.
 
 ### Removing Noise From Image
 
-Image noise is a random variation of brightness or color information in images and is usually an aspect of electronic noise. Removing noise from image improves its quality. It will apply a filter on an image and remove noise using different parameters.
+Image noise is a random variation of brightness or color information in images and is usually an aspect of electronic noise. Removing noise from image improves its quality.
 
 ## Use Cases of Tesseract OCR
 
