@@ -3,72 +3,39 @@
 This prototype is to recognize text inside the image and for that it uses Tesseract OCR. The underlying Tesseract engine will process the picture and return anything that it believes is text.
 
 <img src="https://user-images.githubusercontent.com/8736329/70211504-4678b500-175b-11ea-9479-8362a0b8cde0.gif"
-width="200" height="350">          <img src="https://user-images.githubusercontent.com/8736329/70211414-031e4680-175b-11ea-8575-c371f08b0720.gif"
+width="200" height="350">     <img src="https://user-images.githubusercontent.com/8736329/70211414-031e4680-175b-11ea-8575-c371f08b0720.gif"
 width="200" height="350"> 
 
 
 ## Getting Started
 
-There are following points we need to follow to use [tesseract OCR iOS](https://github.com/gali8/Tesseract-OCR-iOS) and get the better the output out of it. 
+There are the following points we need to follow to use [tesseract OCR iOS](https://github.com/gali8/Tesseract-OCR-iOS) and get the better the output out of it. 
 
-##  Add Trained Data[Tessdata Folder]
+## Add Trained Data[Tessdata Folder]
 
-As we all know training data is used to train an algorithm. Generally, training data is a certain percentage of an overall dataset along with testing set. As a rule, the better the training data, the better the algorithm or classifier performs.Tesseract requires language-specific training data to perform predictions, here language-specific denotes that it predicts within the boundaries of a given language.
+As we all know training data is used to train an algorithm. Generally, training data is a certain percentage of an overall dataset along with a testing set. As a rule, the better the training data, the better the algorithm or classifier performs. Tesseract requires language-specific training data to perform predictions, here language-specific denotes that it predicts within the boundaries of a given language.
 
-To add training data drag the tessdata folder and set the added Folders option to create folder references, It will create a referenced folder. do not forget to select traget before clicking Finish.
-For this project we have only inclueded english taraing files to tessdata folder.you can download and add [tessdata](https://github.com/tesseract-ocr/tessdata) as per your project requriments.
+To add training data drag the tessdata folder and set the added Folders option to create folder references, It will create a referenced folder. do not forget to select a target before clicking Finish.
+For this project we have only included English training files to tessdata folder.you can download and add [tessdata](https://github.com/tesseract-ocr/tessdata) as per your project requirements.
 
 ![Monosnap 2019-12-05 11-41-18](https://user-images.githubusercontent.com/8736329/70208814-88eac380-1754-11ea-81ea-c66b2a789dc0.png)
 
 You should now see a blue tessdata folder in the navigator. The blue color indicates that the folder is referenced rather than an Xcode group.
 
-## Scaling and Removing noise from image
+## Scaling and Removing noise from an image
 
 ### Scaling Image
 
-Image scaling is performed ultimately to achieve resolution enhancement without loss of image qulity. We can implement this using aspect ratio of an image which has the proportional relationship with image width and height. For example if we keep width-to-height ratio constant then it wont affect the aspect ratio of the image.
+Image scaling is performed ultimately to achieve resolution enhancement without loss of image quality. We can implement this using an aspect ratio of an image that has a proportional relationship with image width and height. For example, if we keep a width-to-height ratio constant then it won't affect the aspect ratio of the image.
 
-scaledImage(_ maxDimension: CGFloat) 
-```
-var scaledSize = CGSize(width: maxDimension, height: maxDimension)
-if size.width > size.height {
-scaledSize.height = size.height / size.width * scaledSize.width
-} else {
-scaledSize.width = size.width / size.height * scaledSize.height
-}
-UIGraphicsBeginImageContext(scaledSize)
-draw(in: CGRect(origin: .zero, size: scaledSize))
-let scaledImage = UIGraphicsGetImageFromCurrentImageContext()
-UIGraphicsEndImageContext()
-return scaledImage
-```
 ### Removing Noise From Image
 
-Image noise is random variation of brightness or color information in images, and is usually an aspect of electronic noise. Removing noise from image improves its quality.
-
-removeNoise(noiseReducted: UIImage) 
-```
-guard let openGLContext = EAGLContext(api: .openGLES2) else { return self }
-let ciContext = CIContext(eaglContext: openGLContext)
-
-guard let noiseReduction = CIFilter(name: StringConstants.noiseReductionFilterName) else { return self }
-noiseReduction.setValue(CIImage(image: self), forKey: kCIInputImageKey)
-noiseReduction.setValue(Defaults.inputNoiseLevel, forKey: StringConstants.inputNoiseLevel)
-noiseReduction.setValue(Defaults.inputSharpness, forKey: StringConstants.inputSharpness)
-
-if let output = noiseReduction.outputImage, let cgImage = ciContext.createCGImage(output, from: output.extent) {
-return UIImage(cgImage: cgImage, scale: scale, orientation: imageOrientation)
-}
-return UIImage()
-```
-As shown in the above code snippet It will apply filter on image and remove noise using different parameters.
-
-NOTE: In the Key fields of those two new entries, add Privacy – Camera Usage Description to one and Privacy – Photo Library Usage Description to the other. Select type String for each. Then in the Value column, enter whatever text you’d like to display to the user when requesting permission to access their camera and photo library, respectively.
+Image noise is a random variation of brightness or color information in images and is usually an aspect of electronic noise. Removing noise from image improves its quality. it will apply a filter on image and remove noise using different parameters.
 
 ## Use Cases of Tesseract OCR
 
 
-It can be used to recognize documnets, receipts and street-signs etc.let's go though all of them with example.
+It can be used to recognize documents, receipts, and street-signs etc.let's go through all of them with example.
 
 ### Documents 
 
@@ -92,8 +59,7 @@ Thy placid lightning o'er the awaken'd sky.
 
 ### Receipts
 
-- A slightly difficult example is a Receipt which has non-uniform text layout and multiple fonts. 
-A book pages and documents have very well defined structure, Like very less variation in font sizes and equally spaced data which is not the case in bill receipts. Below examples shows how tesseract will perform on scanned receipts.
+- A slightly difficult example is a Receipt which has non-uniform text layout and multiple fonts. Book pages and documents have very well defined a structure, Like very little variation in font sizes and equally spaced data which is not the case in bill receipts. Below examples shows how tesseract will perform on scanned receipts.
 
 ![receipt](https://user-images.githubusercontent.com/8736329/70234293-5b1e7280-1786-11ea-8b18-27728a210bc0.png)
 
@@ -101,7 +67,7 @@ A book pages and documents have very well defined structure, Like very less vari
 output:
 
 Store #05666
-3515 DEL MAR HTS,RD
+3515 DEL MAR HTS, RD
 SAN DIEGO, CA 92130
 (858) 792-7040
 
@@ -135,7 +101,7 @@ Entry Method: Chip
 
 ### Street Signs
 
-- it can be used to recognize street signs as well, with this example we can see that how tesseract will behave when we pass image with symboals and dark boundaries.
+- It can be used to recognize street signs as well, with this example we can see that how tesseract will behave when we pass image with symbols and dark boundaries.
 - Tesseract does not do a very good job with dark boundaries and often assumes it to be text. However, if we help Tesseract a bit by cropping out the text region, it gives perfect output.
 
 ![ss1](https://user-images.githubusercontent.com/8736329/70234485-bfd9cd00-1786-11ea-8f7e-1e328fc63733.jpeg)
@@ -148,8 +114,5 @@ output:
 Caution
 Site traffic
 ```
-- This is a mistake in output due to symbol. 
+- This is a mistake in output due to a symbol. 
 
-### Copyright
-
-Copyright © 2014-2019 Simform Solutions, Inc. All worldwide rights reserved.
