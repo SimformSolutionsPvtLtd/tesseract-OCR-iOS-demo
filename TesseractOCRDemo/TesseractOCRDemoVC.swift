@@ -11,7 +11,7 @@ import MobileCoreServices
 import TesseractOCR
 import GPUImage
 
-class ViewController: UIViewController {
+class TesseractOCRDemoVC: UIViewController {
     
     // MARK: - Outlets
     
@@ -41,7 +41,9 @@ class ViewController: UIViewController {
     }
     
     // MARK: - Tesseract Image Recognition
-    
+    ///
+    /// - Parameter:
+    ///   - image: takes UIImage
     func performImageRecognition(_ image: UIImage) {
         // can add support to -> StringConstants.lang + "FiraGOItalic" + "FiraGO" + "HelveticaNeue" + "Menlo" + "Menlo-Regular"
         if let tesseract = G8Tesseract(language: StringConstants.lang),  let scaledImage = image.scaledImage(Defaults.maxDimension), let preprocessedImage = scaledImage.preprocessedImage() {
@@ -125,12 +127,12 @@ class ViewController: UIViewController {
 
 // MARK: - UINavigationControllerDelegate
 
-extension ViewController: UINavigationControllerDelegate { }
+extension TesseractOCRDemoVC: UINavigationControllerDelegate { }
 
 // MARK: - UIImagePickerControllerDelegate
 
-extension ViewController: UIImagePickerControllerDelegate {
-    
+extension TesseractOCRDemoVC: UIImagePickerControllerDelegate {
+
     func imagePickerController(_ picker: UIImagePickerController,
                                didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         guard let selectedPhoto =
