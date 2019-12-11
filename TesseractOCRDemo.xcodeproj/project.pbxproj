@@ -8,7 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		DD577BF3239249B100FC1793 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD577BF2239249B100FC1793 /* CustomButton.swift */; };
+
 		DD577BF52392666600FC1793 /* TesseractOCRDemoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD577BF42392666600FC1793 /* TesseractOCRDemoVC.swift */; };
+
 		DD7420502359DA7A002546EA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD74204F2359DA7A002546EA /* Constants.swift */; };
 		DDBA79B12390F5680070F4C4 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = DDBA79B02390F5680070F4C4 /* README.md */; };
 		DDBA79B723923D810070F4C4 /* font in Resources */ = {isa = PBXBuildFile; fileRef = DDBA79B623923D810070F4C4 /* font */; };
@@ -41,7 +43,9 @@
 /* Begin PBXFileReference section */
 		D0BB5DB3A08AA7B40768D20F /* Pods_TesseractOCRDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TesseractOCRDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD577BF2239249B100FC1793 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+
 		DD577BF42392666600FC1793 /* TesseractOCRDemoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TesseractOCRDemoVC.swift; sourceTree = "<group>"; };
+
 		DD74204F2359DA7A002546EA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		DDBA79B02390F5680070F4C4 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		DDBA79B623923D810070F4C4 /* font */ = {isa = PBXFileReference; lastKnownFileType = folder; path = font; sourceTree = "<group>"; };
@@ -129,7 +133,9 @@
 			isa = PBXGroup;
 			children = (
 				DDD46AC723583F6A00C77428 /* AppDelegate.swift */,
+
 				DD577BF42392666600FC1793 /* TesseractOCRDemoVC.swift */,
+
 				DDD46ACB23583F6A00C77428 /* Main.storyboard */,
 				DDD46ACE23583F6A00C77428 /* Assets.xcassets */,
 				DD74204F2359DA7A002546EA /* Constants.swift */,
@@ -327,7 +333,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+
 				DD577BF52392666600FC1793 /* TesseractOCRDemoVC.swift in Sources */,
+
 				DD7420502359DA7A002546EA /* Constants.swift in Sources */,
 				DDD46AFA23584EAC00C77428 /* ImageExtension.swift in Sources */,
 				DDD46AC823583F6A00C77428 /* AppDelegate.swift in Sources */,

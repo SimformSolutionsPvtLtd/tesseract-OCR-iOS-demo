@@ -13,12 +13,14 @@ import CoreImage
 
 extension UIImage {
     
+
     // MARK: - Image Scaling
     ///
     /// - Parameter:
     ///   - maxDimension: takes Dimension(CGFloat)
     /// - returns:
     ///   - Scaled Image(UIImage)
+
     func scaledImage(_ maxDimension: CGFloat) -> UIImage? {
         
         var scaledSize = CGSize(width: maxDimension, height: maxDimension)
@@ -37,10 +39,12 @@ extension UIImage {
         return scaledImage
     }
     
+
     // MARK: - Image preprocessing
     ///
     /// - returns:
     ///   - Preprocessed Image(UIImage)
+
     func preprocessedImage() -> UIImage? {
         
         let stillImageFilter = GPUImageAdaptiveThresholdFilter()
@@ -53,12 +57,14 @@ extension UIImage {
         return finalImage
     }
     
+
     // MARK: - Remove noise from an image
     ///
     /// - Parameter:
     ///   - noiseReducted: takes Image(UIImage)
     /// - returns:
     ///   - Noise-reducted Image(UIImage)
+
     func removeNoise(noiseReducted: UIImage) -> UIImage {
         
         guard let openGLContext = EAGLContext(api: .openGLES2) else { return self }
