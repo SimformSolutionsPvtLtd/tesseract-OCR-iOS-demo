@@ -9,9 +9,6 @@ width="350" height="600">
 
 ## Getting Started
 
-There are the following points we need to follow to use [tesseract OCR iOS](https://github.com/gali8/Tesseract-OCR-iOS) and get the better the output out of it. 
-
-
 ## Add Trained Data[Tessdata Folder]
 
 As we all know training data is used to train an algorithm. Generally, training data is a certain percentage of an overall dataset along with a testing set. As a rule, the better the training data, the better the algorithm or classifier performs. Tesseract requires language-specific training data to perform predictions, here language-specific denotes that it predicts within the boundaries of a given language.
