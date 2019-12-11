@@ -3,10 +3,8 @@
 This prototype is to recognize text inside the image and for that it uses Tesseract OCR. The underlying Tesseract engine will process the picture and return anything that it believes is text.
 
 <img src="https://user-images.githubusercontent.com/8736329/70211504-4678b500-175b-11ea-9479-8362a0b8cde0.gif"
-
 width="350" height="600">     <img src="https://user-images.githubusercontent.com/8736329/70211414-031e4680-175b-11ea-8575-c371f08b0720.gif"
 width="350" height="600"> 
-
 
 
 ## Getting Started
