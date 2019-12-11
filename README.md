@@ -38,9 +38,6 @@ Image noise is a random variation of brightness or color information in images a
 ## Use Cases of Tesseract OCR
 
 
-
-It can be used to recognize documents, receipts, and street-signs etc.let's go through all of them with example.
-
 It can be used to recognize documents, receipts, and street-signs etc. Let's go through all of them with examples.
 
 
