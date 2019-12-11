@@ -41,6 +41,9 @@ class TesseractOCRDemoVC: UIViewController {
     }
     
     // MARK: - Tesseract Image Recognition
+    ///
+    /// - Parameter:
+    ///   - image: takes UIImage
     func performImageRecognition(_ image: UIImage) {
         // can add support to -> StringConstants.lang + "FiraGOItalic" + "FiraGO" + "HelveticaNeue" + "Menlo" + "Menlo-Regular"
         if let tesseract = G8Tesseract(language: StringConstants.lang),  let scaledImage = image.scaledImage(Defaults.maxDimension), let preprocessedImage = scaledImage.preprocessedImage() {
